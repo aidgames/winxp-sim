@@ -1,0 +1,16 @@
+$bordersize:2px;
+
+.winui{
+    &__startmenu{
+        position: absolute;
+        bottom: 0px;
+        background-color: aqua;
+        display: inline-block;
+        border-top: #{$bordersize} solid skyblue;
+        width: 100%; // calc( 100% - calc(#{$bordersize} * 2 ));
+        &__btn{
+            outline: 0;
+            border: 0;
+        }
+    }
+}
