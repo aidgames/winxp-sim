@@ -1,5 +1,6 @@
 $bordersize:2px;
-$menu_size:24px;
+$startmenu_height:24px;
+$menu_width:200px;
 
 .winui{
     &__startmenu{
@@ -8,7 +9,7 @@ $menu_size:24px;
         background-color: aqua;
         display: inline-block;
         border-top: #{$bordersize} solid skyblue;
-        height: #{$menu_size};
+        height: #{$startmenu_height};
         width: 100%; // calc( 100% - calc(#{$bordersize} * 2 ));
         &__btn{
             outline: 0;
@@ -17,10 +18,10 @@ $menu_size:24px;
     }
 
     &__menu_ui{
-       width: 350px;
+       width: #{$menu_width};
        border: 5px solid skyblue;
        border-bottom: 0;
-       bottom:#{$menu_size};
+       bottom:#{$startmenu_height};
        display: inline-block;
        position: absolute;
     }
