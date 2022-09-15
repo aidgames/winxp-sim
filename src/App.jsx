@@ -1,12 +1,11 @@
 import WinUI from "./winui";
 import './app.scss'
 
-export default function App() {
+
+export default function App() { 
   return (
     <div className="App">
-      <WinUI>
-
-      </WinUI>
+      <WinUI/>
     </div>
     
   );

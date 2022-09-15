@@ -3,6 +3,8 @@ $startmenu_height:24px;
 $menu_width:200px;
 
 .winui{
+    width: 100%;
+    height: 100%;
     &__startmenu{
         position: absolute;
         bottom: 0px;

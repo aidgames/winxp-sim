@@ -14,6 +14,7 @@ export default function WinUI(){
     }
     return (
         <div className='winui'>
+            <div className='winui__backgroud'/>
             {menu && <StartMenu className="winui__menu_ui"/>}
             <div className="winui__startmenu">
                 
