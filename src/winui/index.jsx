@@ -7,13 +7,12 @@ export default function WinUI(){
         return (e)=>{
             let nowMenu=!menu
             setMenu(nowMenu)
-            console.log(nowMenu)
         }
 
     }
     return (
         <div className='winui'>
-            {menu &&<div>
+            {menu &&<div className='winui__menu_ui'>
                     Hello!
             </div>}
             <div className="winui__startmenu">
