@@ -1,4 +1,4 @@
-#winxp simulator
+# winxp simulator
 
 ### `npm start`
 
