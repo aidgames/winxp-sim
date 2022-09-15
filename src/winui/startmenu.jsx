@@ -4,7 +4,9 @@ var items=startmenu_items();
 
 export default function StartMenu({className}, ...props){
     const menu_items=items.map((item, index)=>
-        <li key={index} className={className+"__items__item"} onClick={item.onclick}>{item.name}</li>
+        <li key={index} className={className+"__items__item"} onClick={item.onclick}>
+            <img src={item.img} alt={item.name} className={className+"__items__item__image"}/>{item.name}
+        </li>
     )
     return (
         <div className={className}>

@@ -1,5 +1,6 @@
 import './winui.scss'
 import StartMenu from './startmenu';
+import Window from '../winapi/window';
 
 import { useState } from 'react'
 
@@ -14,8 +15,7 @@ export default function WinUI(){
     }
     return (
         <div className='winui'>
-            <div className='winui__backgroud'/>
-            {menu && <StartMenu className="winui__menu_ui"/>}
+            {menu && <Window><StartMenu className="winui__menu_ui"/></Window>}
             <div className="winui__startmenu">
                 
                 <div className='winui__startmenu__btn'>
