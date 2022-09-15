@@ -15,7 +15,7 @@ export default function Window({children}, ...props){
                 </div>
             </div>
             <div className="winui__window__content">
-                1
+                {children}
             </div>
         </div>
         )
