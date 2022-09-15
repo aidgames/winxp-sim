@@ -14,15 +14,32 @@ $menu_width:200px;
         &__btn{
             outline: 0;
             border: 0;
-        }
-    }
+        }    }
 
     &__menu_ui{
-       width: #{$menu_width};
-       border: 5px solid skyblue;
-       border-bottom: 0;
-       bottom:#{$startmenu_height};
-       display: inline-block;
-       position: absolute;
+        width: #{$menu_width};
+        border: 5px solid skyblue;
+        border-bottom: 0;
+        bottom:#{$startmenu_height};
+        display: inline-block;
+        position: absolute;
+        &__item{
+            list-style-type: none;
+            background-color: rgba(0, 0, 255, 0.4);
+            text-align: center;
+            margin-left: -25%;
+            width: 125%;
+            margin-top: 2px;
+            &:first-child{
+                margin-top:0;
+            }
+        }
+        &__items{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
     }
+
+    
 }
