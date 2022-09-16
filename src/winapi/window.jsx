@@ -4,16 +4,19 @@ import { useSpring, animated } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 
 export default function Window({children}, ...props){
-    const [{ x, y }, api] = useSpring(() => ({ x: 0, y: 0 }))
-    const bind = useDrag(({ down, movement: [mx, my] }) => {
-      api.start({ x: down ? mx : 0, y: down ? my : 0, immediate: down })
+    const [{ x, y }, api] = useSpring(() => ({ x: 5, y: 5}))
+    const bind = useDrag((state) => {
+      api.start({
+        x: Number(state.offset[0]),
+        y: Number(state.offset[1])
+    })
     })
     const [win, setWin]=useState(true);
     if (win){
         return (
         <animated.div className="winui__window" style={{
-            "margin-left": x,
-            "margin-top": y
+            "marginLeft": x,
+            "marginTop": y
         }}>
             <div className="winui__window__frame" {...bind()}>
                 <div className="winui__window__frame__buttons">
@@ -26,7 +29,7 @@ export default function Window({children}, ...props){
             </div>
             <div className="winui__window__content">
                 {children}
-            </div>
+            </div>  
         </animated.div>
         )
     }
