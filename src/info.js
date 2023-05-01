@@ -1,4 +1,4 @@
-export default  {
+export default {
     build: 1,
     dev: true
 }
